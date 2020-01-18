@@ -8,6 +8,7 @@
     "dev": "nodemon"
   },
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "sucrase": "^3.12.1"
   },
