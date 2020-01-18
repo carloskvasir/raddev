@@ -4,7 +4,8 @@
   "main": "server.js",
   "license": "MPL-2.0",
   "scripts": {
-    "start": "node server.js"
+    "start": "sucrase-node server.js",
+    "dev": "nodemon"
   },
   "dependencies": {
     "express": "^4.17.1",
