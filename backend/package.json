@@ -1,15 +1,17 @@
 {
   "name": "raddev-backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "src/server.js",
   "license": "MPL-2.0",
   "scripts": {
-    "start": "sucrase-node server.js",
+    "start": "sucrase-node src/server.js",
     "dev": "nodemon"
   },
   "dependencies": {
     "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.8.9",
     "sucrase": "^3.12.1"
   },
   "devDependencies": {
