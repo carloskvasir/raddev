@@ -1,5 +1,7 @@
 import Router from 'express/lib/router';
 
+import DevController from './controllers/DevController';
+
 const routes = new Router();
 // Métodos HTTP: GET, POST, PUT, DELETE
 
@@ -9,8 +11,6 @@ const routes = new Router();
 // Route Partams: req.params (Identificar um recurso para alterar)
 // Body: req.body (Dados para criação ou alteração de algo)
 
-routes.get('/', (req, res) => {
-  return res.json({ ok: 'ok' });
-});
+routes.post('/devs', DevController.create);
 
 export default routes;

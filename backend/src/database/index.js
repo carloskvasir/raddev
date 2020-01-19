@@ -11,6 +11,7 @@ class Database {
     this.mongoConnection = mongoose.connect(
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_SERV}/${process.env.DB_BASE}?${process.env.DB_OPTS}`,
       {
+        useCreateIndex: true,
         useNewUrlParser: true,
         useFindAndModify: true,
         useUnifiedTopology: true,
