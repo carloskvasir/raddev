@@ -1,8 +1,15 @@
 import axios from 'axios';
 
 import Dev from '../models/Dev';
+import parseStringAsArray from '../utils/parseStringAsArray';
 
 class DevController {
+  async index(req, res) {
+    const devs = await Dev.find();
+
+    return res.json(devs);
+  }
+
   async create(req, res) {
     const { github_username, techs, latitude, longitude } = req.body;
 
@@ -16,7 +23,7 @@ class DevController {
       // eslint-disable-next-line no-undef
       const { name = login, avatar_url, bio } = response.data;
 
-      const techsArray = techs.split(',').map(tech => tech.trim());
+      const techsArray = parseStringAsArray(techs);
 
       const location = {
         type: 'Point',

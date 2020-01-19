@@ -1,6 +1,7 @@
 import Router from 'express/lib/router';
 
 import DevController from './controllers/DevController';
+import SearchController from './controllers/SearchController';
 
 const routes = new Router();
 // Métodos HTTP: GET, POST, PUT, DELETE
@@ -12,5 +13,8 @@ const routes = new Router();
 // Body: req.body (Dados para criação ou alteração de algo)
 
 routes.post('/devs', DevController.create);
+routes.get('/devs', DevController.index);
+
+routes.get('/searchs', SearchController.index);
 
 export default routes;
