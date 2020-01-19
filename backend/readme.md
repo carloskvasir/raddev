@@ -15,6 +15,6 @@ Execute com `yarn start`
 
 ## Funcionalidades Futuras
 
-[] dev.update - Manter sempre o user do github.
+- [ ] dev.update - Manter sempre o user do github.
 
-[] dev.delete
+- [ ] dev.delete
