@@ -2,7 +2,11 @@
 
 ## 🏃 Como rodar
 
+<<<<<<< HEAD
 Configure o mongo em .env e instale as dependencias com yarn:
+=======
+Configure o mongo em .dev e instale as dependencias com yarn:
+>>>>>>> ecedbb15d37d04f2ab931ff967313ae79ed1bf48
 
 ```bash
 cp .env.example .env
