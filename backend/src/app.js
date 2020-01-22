@@ -1,4 +1,5 @@
 import compression from 'compression';
+import cors from 'cors';
 import express from 'express';
 
 import routes from './routes';
@@ -16,6 +17,7 @@ class App {
   middlewares() {
     this.server.use(compression());
     this.server.use(express.json());
+    this.server.use(cors());
   }
 
   routes() {
