@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import Devitem from './components/Devitem';
 import api from './services/api';
 import './global.css';
 import './App.css';
@@ -93,7 +94,7 @@ function App() {
                 id="latitude"
                 required
                 value={latitude}
-                onChange={e => (setLatitude = e.target.value)}
+                onChange={e => setLatitude(e.target.value)}
               />
             </div>
 
@@ -105,7 +106,7 @@ function App() {
                 id="longitude"
                 required
                 value={longitude}
-                onChange={e => (setLongitude = e.target.value)}
+                onChange={e => setLongitude(e.target.value)}
               />
             </div>
           </div>
@@ -116,19 +117,7 @@ function App() {
       <main>
         <ul>
           {devs.map(dev => (
-            <li key={dev._id} className="dev-item">
-              <header>
-                <img src={dev.avatar_url} alt={`Imagem de ${dev.name}`} />
-                <div className="user-info">
-                  <strong>{dev.name}</strong>
-                  <span>{dev.techs.join(', ')}</span>
-                </div>
-              </header>
-              <p>{dev.bio}</p>
-              <a href={`https://github.com/${dev.github_username}`}>
-                Acessar perfil no Github
-              </a>
-            </li>
+            <Devitem key={dev._id} dev={dev} />
           ))}
         </ul>
       </main>
