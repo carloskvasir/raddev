@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import MapView, { Marker, Callout } from 'react-native-maps';
 
-function Main() {
+function Main({ navigation }) {
   const [currentRegion, setCurrentRegion] = useState(null);
   useEffect(() => {
     async function loadInitialPosition() {
@@ -43,7 +43,12 @@ function Main() {
             uri: 'https://avatars2.githubusercontent.com/u/28787559?s=460&v=4',
           }}
         />
-        <Callout>
+        <Callout
+          onPress={() => {
+            // navegação
+            navigation.navigate('Profile', { github_user: 'carloskvasir' });
+          }}
+        >
           <View style={styles.callout}>
             <Text style={styles.devName}>Carlos Lima (Kvasir)</Text>
             <Text style={styles.devBio}>BIO S2</Text>
