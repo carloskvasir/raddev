@@ -3,8 +3,8 @@ import {
   requestPermissionsAsync,
 } from 'expo-location';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Image } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { StyleSheet, Image, Text, View } from 'react-native';
+import MapView, { Marker, Callout } from 'react-native-maps';
 
 function Main() {
   const [currentRegion, setCurrentRegion] = useState(null);
@@ -43,6 +43,13 @@ function Main() {
             uri: 'https://avatars2.githubusercontent.com/u/28787559?s=460&v=4',
           }}
         />
+        <Callout>
+          <View style={styles.callout}>
+            <Text style={styles.devName}>Carlos Lima (Kvasir)</Text>
+            <Text style={styles.devBio}>BIO S2</Text>
+            <Text style={styles.devTechs}>ReactJs, RN, Node.js</Text>
+          </View>
+        </Callout>
       </Marker>
     </MapView>
   );
@@ -57,6 +64,20 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 4,
     borderColor: '#FFF',
+  },
+  callout: {
+    width: 260,
+  },
+  devName: {
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  devBio: {
+    color: '#666',
+    marginTop: 5,
+  },
+  devTechs: {
+    marginTop: 5,
   },
 });
 
