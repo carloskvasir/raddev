@@ -1,25 +1,15 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { WebView } from 'react-native-webview';
 
-function Profile() {
+function Profile({ navigation }) {
+  const githubUser = navigation.getParam('github_user');
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello OminiStack!!!</Text>
-    </View>
+    <WebView
+      style={{ flex: 1 }}
+      source={{ uri: `https://github.com/${githubUser}` }}
+    />
   );
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#7159C1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 32,
-  },
-});
 
 export default Profile;
