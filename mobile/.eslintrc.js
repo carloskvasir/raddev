@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier'],
+  plugins: ['react', 'prettier', 'eslint-plugin-import-helpers'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
@@ -34,5 +34,19 @@ module.exports = {
     'no-console': 'off',
     // desable error in style
     'no-use-before-define': ['error', { variables: false }],
+    'import-helpers/order-imports': [
+      'warn',
+      {
+        // example configuration
+        newlinesBetween: 'always',
+        groups: [
+          'module',
+          '/^@shared/',
+          '/pages/',
+          [('parent', 'sibling', 'index')],
+        ],
+        alphabetize: { order: 'asc', ignoreCase: true },
+      },
+    ],
   },
 };
