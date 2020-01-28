@@ -20,6 +20,7 @@ import api from '../services/api';
 function Main({ navigation }) {
   const [devs, setDevs] = useState([]);
   const [currentRegion, setCurrentRegion] = useState(null);
+  const [inputTechs, setInputTechs] = useState('');
 
   useEffect(() => {
     async function loadInitialPosition() {
@@ -50,10 +51,9 @@ function Main({ navigation }) {
       params: {
         latitude,
         longitude,
-        techs: 'linux',
+        techs: inputTechs,
       },
     });
-    console.log(response.data);
 
     setDevs(response.data);
   }
@@ -106,6 +106,8 @@ function Main({ navigation }) {
           placeholderTextColor="#999"
           autoCapitalize="words" // caixa alta em cada palavra
           autoCorrect={false}
+          value={inputTechs}
+          onChangeText={setInputTechs}
         />
         <TouchableOpacity onPress={loadDevs} style={styles.loadButton}>
           <MaterialIcons name="my-location" size={20} color="#FFF" />
