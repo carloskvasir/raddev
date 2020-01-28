@@ -8,9 +8,10 @@ Aplicativo feito na semana Oministack 10, para encontrar devs próximos que util
 - Expo (Facilita a utilização de recursos Nativos)
 - Axios (Faz as requisições http)
 
-## O que falta:
+## O que Melhorar?
 
 - [ ] Edição de Devs
 - [ ] Opção de Apagar
+- [ ] Organizar tudo em Componentes
 
 Feito por José Carlos de Lima Júnior (kvasir)
