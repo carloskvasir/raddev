@@ -2,13 +2,12 @@
 
 Backend feito na semana Oministack 10, para encontrar devs próximos que utilizam as mesmas tecnologias.
 
-## :artificial_satellite: Tecnologias
-
-- Express ( Framework para gerenciar rotas e requisições )
-- dotEnv ( Controla informações sensiveis )
-- sucrase ( Faz transpilação )
-- mongoose ( Conecta com o MongoDB)
-- Axios ( Faz as requisições http )
+## 🛰️ Tecnologias utilizadas
+ - Express (Framework para gerenciar rotas e requisições)
+ - dotEnv (Controla informações sensiveis)
+ - sucrase (Faz transpilação)
+ - mongoose (Conecta com o MongoDB)
+ - Axios (Faz as requisições http)
 
 ## 🏃 Como rodar
 
@@ -25,7 +24,6 @@ yarn
 Execute com `yarn start`
 
 ## 👍 O que Melhorar?
-
 - [ ] dev.update - Manter sempre o user do github.
 - [ ] dev.delete
 
