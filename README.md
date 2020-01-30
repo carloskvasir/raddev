@@ -5,11 +5,11 @@ Projeto feito na semana Oministack 10, para encontrar devs próximos que utiliza
 ## 🛰️ Tecnologias utilizadas
 
 ### ⚙️ Backend
- - Express ( Framework para gerenciar rotas e requisições )
- - dotEnv ( Controla informações sensiveis )
- - sucrase ( Faz transpilação )
- - mongoose ( Conecta com o MongoDB )
- - Axios ( Faz as requisições http )
+ - Express (Framework para gerenciar rotas e requisições)
+ - dotEnv (Controla informações sensiveis)
+ - sucrase (Faz transpilação)
+ - mongoose (Conecta com o MongoDB)
+ - Axios (Faz as requisições http)
 
 ### 🖥️ Frontend
  - React
